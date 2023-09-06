@@ -1,0 +1,95 @@
+#flag {
+    width: 760px;
+    height: 400px;
+    position: relative;
+  }
+  
+  #union {
+    background-color: navy;
+    width: 285px;
+    height: 210px;
+    position: absolute;
+    z-index: 2;
+  }
+  
+
+  
+  .stripe {
+    width: 100%;
+    height: 30.76px; /* 400px/13 stripes */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .red-stripe {
+    background-color: red;
+  }
+  
+  .white-stripe {
+    background-color: white;
+  }
+  
+  /* Add alternate colors for the flag */
+  .alternate-colors #union {
+    background-color: green;
+  }
+  
+  .alternate-colors .red-stripe {
+    background-color: orange;
+  }
+  
+  .alternate-colors .white-stripe {
+    background-color: yellow;
+  }
+  
+
+
+
+  .star {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+  }
+  
+  .star::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+    transform: rotate(-35deg);
+  }
+  
+  .star::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+    transform: rotate(35deg);
+  }
+  
+  /* ... Alternate colors ... */
+  
+  .alternate-colors .star {
+    border-bottom: 10px solid black;
+  }
+  
+  .alternate-colors .star::before {
+    border-bottom: 10px solid black;
+  }
+  
+  .alternate-colors .star::after {
+    border-bottom: 10px solid black;
+  }
